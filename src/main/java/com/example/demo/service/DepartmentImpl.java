@@ -4,6 +4,7 @@ import com.example.demo.entity.Department;
 import com.example.demo.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 import java.util.Objects;
@@ -58,4 +59,11 @@ public class DepartmentImpl implements  DepartmentService {
 
         return departmentRepository.save(depDB);
     }
+
+    @Override
+    public Department fetchDepartmentByName(String department) {
+        return departmentRepository.findByName(department);
+    }
+
+
 }
