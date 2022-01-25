@@ -1,0 +1,17 @@
+package com.example.demo.service;
+
+import com.example.demo.entity.Department;
+
+import java.util.List;
+
+public interface DepartmentService {
+    Department saveDepartment(Department department);
+
+    List<Department> fetchDepartmentList();
+
+    Department fetchDepartmentById(Long id);
+
+    void deleteDepartmentById(Long id);
+
+    Department updateDepartment(Long id, Department department);
+}
